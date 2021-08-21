@@ -1,6 +1,5 @@
 notebook==6.4.0
 voila==0.2.10
-rdkit==2020.09.1.0
 ipython==7.25.0
 ipywidgets==7.6.3
 ipympl==0.7.0
