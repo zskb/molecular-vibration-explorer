@@ -1,4 +1,3 @@
-python==3.7.10
 voila==0.2.10
 voila-materialscloud-template==0.3.4
 
