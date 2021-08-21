@@ -1,7 +1,4 @@
-numpy==1.16.4
-ipython==7.6.1
-ipywidgets==7.5.0
-ipympl==0.2.1
+python==3.7.10
 voila==0.2.10
 voila-materialscloud-template==0.3.4
 
