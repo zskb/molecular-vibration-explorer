@@ -1,0 +1,13 @@
+channels:
+        - conda-forge
+        - rdkit
+dependencies:
+        - rdkit
+        - ipython
+        - ipywidgets
+        - ipympl
+        - numpy
+        - openbabel=2.4.1
+        - nglview
+        - mplcursors
+        - voila=0.2.10
