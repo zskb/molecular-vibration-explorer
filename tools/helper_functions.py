@@ -7,7 +7,6 @@ Created on Wed Jun  9 11:34:25 2021
 
 import numpy as np
 import math
-import openbabel as ob
 
 phys_constants=dict(amu = 1.66053878e-27,    # kg
                     h   = 6.62606896e-34,    # Js
@@ -71,26 +70,101 @@ def get_oriented_box(coords,vdw):
             coormax[i,:]=coords[i,:]+vdw[i]
         cell=np.max(coormax,axis=0)-np.min(coormin,axis=0)
         return cell    
+
+VdwRad={'H': 1.1 ,
+'He': 1.4 ,
+'Li': 1.81 ,
+'Be': 1.53 ,
+'B': 1.92 ,
+'C': 1.7 ,
+'N': 1.55 ,
+'O': 1.52 ,
+'F': 1.47 ,
+'Ne': 1.54 ,
+'Na': 2.27 ,
+'Mg': 1.73 ,
+'Al': 1.84 ,
+'Si': 2.1 ,
+'P': 1.8 ,
+'S': 1.8 ,
+'Cl': 1.75 ,
+'Ar': 1.88 ,
+'K': 2.75 ,
+'Ca': 2.31 ,
+'Sc': 2.3 ,
+'Ti': 2.15 ,
+'V': 2.05 ,
+'Cr': 2.05 ,
+'Mn': 2.05 ,
+'Fe': 2.05 ,
+'Co': 2.0 ,
+'Ni': 2.0 ,
+'Cu': 2.0 ,
+'Zn': 2.1 ,
+'Ga': 1.87 ,
+'Ge': 2.11 ,
+'As': 1.85 ,
+'Se': 1.9 ,
+'Br': 1.83 ,
+'Kr': 2.02 ,
+'Rb': 3.03 ,
+'Sr': 2.49 ,
+'Y': 2.4 ,
+'Zr': 2.3 ,
+'Nb': 2.15 ,
+'Mo': 2.1 ,
+'Tc': 2.05 ,
+'Ru': 2.05 ,
+'Rh': 2.0 ,
+'Pd': 2.05 ,
+'Ag': 2.1 ,
+'Cd': 2.2 ,
+'In': 2.2 ,
+'Sn': 1.93 ,
+'Sb': 2.17 ,
+'Te': 2.06 ,
+'I': 1.98 ,
+'Xe': 2.16 ,
+'Cs': 3.43 ,
+'Ba': 2.68 ,
+'La': 2.5 ,
+'Ce': 2.48 ,
+'Pr': 2.47 ,
+'Nd': 2.45 ,
+'Pm': 2.43 ,
+'Sm': 2.42 ,
+'Eu': 2.4 ,
+'Gd': 2.38 ,
+'Tb': 2.37 ,
+'Dy': 2.35 ,
+'Ho': 2.33 ,
+'Er': 2.32 ,
+'Tm': 2.3 ,
+'Yb': 2.28 ,
+'Lu': 2.27 ,
+'Hf': 2.25 ,
+'Ta': 2.2 ,
+'W': 2.1 ,
+'Re': 2.05 ,
+'Os': 2.0 ,
+'Ir': 2.0 ,
+'Pt': 2.05 ,
+'Au': 2.1 }
+
+def rotate_molecule(atoms,refcoords,filename,phi=0,theta=0,xi=0):  
     
-def rotate_molecule(mol,filename,phi=0,theta=0,xi=0):  
-    
-    refcoords= [[atom.GetX(),atom.GetY(),atom.GetZ()] for atom in ob.OBMolAtomIter(mol)] 
-    atnums= [atom.GetAtomicNum() for atom in ob.OBMolAtomIter(mol)] 
-  
     # get Van der Waals radii
-    vdw=np.zeros_like(atnums,dtype=float)
-    etab=ob.OBElementTable()
-    for i,a in enumerate(ob.OBMolAtomIter(mol)): 
-        an=a.GetAtomicNum()
-        vdw[i]= etab.GetVdwRad(an)
-  
+    vdw=np.zeros_like(atoms,dtype=float)
+    for i,a in enumerate(atoms): 
+        vdw[i]= VdwRad[a]
+
     # do custom rotation with phi and theta
     rotated=single_rot(refcoords,a=phi,b=theta,c=xi)
 
     # get dimensions of cell encapsulating the molecule
     rotc=np.zeros_like(refcoords)
     for s,c in enumerate(refcoords):
-        if atnums[s]==79:
+        if atoms[s]=='Au':
             vdw[s]=0     # do not count gold atom for cell size
             rotc[s]=np.array([0,0,0])
             continue 
@@ -102,4 +176,3 @@ def rotate_molecule(mol,filename,phi=0,theta=0,xi=0):
     rot_axes=single_rot_T(axes,a=phi,b=theta,c=xi)
 
     return rot_axes,cell
-
