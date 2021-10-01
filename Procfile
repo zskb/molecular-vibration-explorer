@@ -1,1 +1,1 @@
-web: voila --template=materialscloud --VoilaConfiguration.enable_nbextensions=True --VoilaConfiguration.file_whitelist="['.*\.(png|mol|dat)']" --port=$PORT --no-browser --MappingKernelManager.cull_interval=60 --MappingKernelManager.cull_idle_timeout=120 --MappingKernelManager.cull_busy=True 
+web: voila --template=oscar --VoilaConfiguration.enable_nbextensions=True --port=$PORT --no-browser --MappingKernelManager.cull_interval=60 --MappingKernelManager.cull_idle_timeout=120 --MappingKernelManager.cull_busy=True 
