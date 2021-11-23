@@ -1,8 +1,8 @@
 # Molecular Vibration Explorer
 
 **Molecular Vibration Explorer** is an interactive tool for exploring molecular vibrational spectra and tensorial light-vibration coupling strength for applications in the field of surface-enhanced spectroscopy. The Gold database gathers the results from density functional theory calculations on 2’800 commercially available thiol compounds linked to a gold atom, with the main motivation to screen the best molecules for THz and mid-infrared to visible upconversion. The Thiol database contains calculations on 1’900 commercially available thiol compounds. The different tools available to analyze the database were previously introduced in the following references: 
-* (1) Z. Koczor-Benda, A. L. Boehmke, A. Xomalis, R. Arul, C. Readman, J. J. Baumberg & E. Rosta "Molecular Screening for Terahertz Detection with Machine-Learning-Based Methods", Phys. Rev. X (2021)
-* [(2) P. Roelli, D. Martin-Cano, T.J. Kippenberg & C. Galland, "Molecular Platform for Frequency Upconversion at the Single-Photon Level", Phys. Rev. X,10(3):031057 (2020)](https://link.aps.org/doi/10.1103/PhysRevX.10.031057)
+* [(1) Z. Koczor-Benda, A. L. Boehmke, A. Xomalis, R. Arul, C. Readman, J. J. Baumberg & E. Rosta "Molecular Screening for Terahertz Detection with Machine-Learning-Based Methods", Phys. Rev. X, 11(4):041035 (2021)](https://link.aps.org/doi/10.1103/PhysRevX.11.041035)
+* [(2) P. Roelli, D. Martin-Cano, T.J. Kippenberg & C. Galland, "Molecular Platform for Frequency Upconversion at the Single-Photon Level", Phys. Rev. X, 10(3):031057 (2020)](https://link.aps.org/doi/10.1103/PhysRevX.10.031057)
 
 
 ## Description of jupyter notebooks
