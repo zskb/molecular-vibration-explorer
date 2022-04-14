@@ -1,5 +1,5 @@
 notebook==6.4.0
-voila==0.2.16
+voila==0.3.5
 voila-materialscloud-template==0.3.7
 ipython==7.25.0
 ipywidgets==7.6.3
