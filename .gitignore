@@ -1,2 +1,4 @@
 .ipynb_checkpoints/*
 *.pyc
+*.pyc
+tools/__pycache__/load_database.cpython-37.pyc
