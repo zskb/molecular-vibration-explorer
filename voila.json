@@ -1,6 +1,6 @@
 {
     "VoilaConfiguration": {
-        "template": "materialscloud-discover",
+        "template": "materialscloud",
         "preheat_kernel": true,
         "enable_nbextensions": true,
         "file_whitelist": "['.*\.(png|mol|dat)']"
