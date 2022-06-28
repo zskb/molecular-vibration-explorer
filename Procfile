@@ -1,1 +1,1 @@
-web: voila --template=materialscloud-discover --Voila.config_file_paths=./ --Voila.ip=0.0.0.0 . --port=$PORT --no-browser 
+web: voila --template=materialscloud-discover --Voila.ip=0.0.0.0 --VoilaConfiguration.enable_nbextensions=True --VoilaConfiguration.file_whitelist="['.*\.(png|mol|dat)']" --port=$PORT --no-browser --MappingKernelManager.cull_interval=60 --MappingKernelManager.cull_idle_timeout=120 --MappingKernelManager.cull_busy=True 
