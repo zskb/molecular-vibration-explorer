@@ -1,0 +1,26 @@
+{
+    "VoilaConfiguration": {
+        "template": "materialscloud-discover",
+        "preheat_kernel": true,
+        "enable_nbextensions": true,
+        "file_whitelist": "['.*\.(png|mol|dat)']"
+    },
+    "VoilaExecutePreprocessor": {
+        "timeout": 180
+    },
+    "MappingKernelManager": {
+      "cull_idle_timeout": 120,
+      "cull_interval": 60,
+      "cull_busy": true,
+      "preheat_blacklist": [
+          "modes.ipynb",
+          "database.ipynb",
+          "search.ipynb",
+          "molecule.ipynb"],
+      "kernel_pools_config": {
+          "default": {
+              "pool_size": 1
+          }
+      }
+    }
+}
