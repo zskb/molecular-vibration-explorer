@@ -37,7 +37,7 @@ Molecular similarity scores are generated using RDKit. NGLview is used for the 3
 ## How to cite
 
 If this database was useful for your work, please cite it in the following way:
-Z. Koczor-Benda, P. Roelli, C. Galland & E. Rosta, “Molecular Vibration Explorer: an online database and toolbox for terahertz detection, surface-enhanced infrared and Raman spectroscopy”, arXiv:XXX (2021) 
+[Z. Koczor-Benda, P. Roelli, C. Galland & E. Rosta, “Molecular Vibration Explorer: an online database and toolbox for surface-enhanced frequency conversion and infrared and Raman spectroscopy”, J. Phys. Chem. A 2022, 126, 28, 4657–4663](https://doi.org/10.1021/acs.jpca.2c03700)
 
 
 ## Acknowledgements
