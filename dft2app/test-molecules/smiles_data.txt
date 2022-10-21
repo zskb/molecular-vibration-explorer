@@ -1,0 +1,4 @@
+[CH3]c1[cH][cH]c([cH][cH]1)[SH]	freq-106-45-6.out
+[OH]C(=O)c1[cH][cH]c([cH][cH]1)[SH]	freq-1074-36-8.out
+[SH][CH]1[CH2][CH2][CH2][CH2]1	freq-1679-07-8.out
+[SH][CH]1c2[cH][cH][cH][cH]c2c2c1[cH][cH][cH][cH]2	freq-19552-08-0.out

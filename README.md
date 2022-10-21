@@ -40,6 +40,21 @@ If this database was useful for your work, please cite it in the following way:
 [Z. Koczor-Benda, P. Roelli, C. Galland & E. Rosta, “Molecular Vibration Explorer: an online database and toolbox for surface-enhanced frequency conversion and infrared and Raman spectroscopy”, J. Phys. Chem. A 2022, 126, 28, 4657–4663](https://doi.org/10.1021/acs.jpca.2c03700)
 
 
+## How to go further / Advanced options
+
+Both the DFT results used in this app and the notebooks scripts can be found following the link to the dedicated GitHub repository: 
+[MVE GitHub repository link](https://github.com/zskb/molecular-vibration-explorer)
+
+There, we also included a ***dft2app*** folder that contains: 
+    * Python scripts used to convert Gaussian output files to the input files required by the molecular-vibration-explorer application 
+    * Local notebooks that enable to quickly visualize DFT calculations’ results not included in the molecular-vibration-explorer database 
+    * A few molecules’ DFT outputs to test the scripts
+
+To use the application on one’s own DFT calculations, two scripts need to be run before visualizing the results via the local notebooks: 
+*create_database_files.py*: creates files for the database analysis tool, only needed if one wants to compare with other molecules in the database or extend it. This generates the 2D pictures for the molecules
+*create_molecular_data_files.py*: creates files used by the molecule and normal mode tools, such as dat files and 3D geometries
+
+
 ## Acknowledgements
 
 This work received funding from the European Union’s Horizon 2020 research and innovation program under Grant Agreement No. 829067 (FET Open THOR). The authors want to thank Giovanni Pizzi and Dou Du for their technical support during the development of the website. 
