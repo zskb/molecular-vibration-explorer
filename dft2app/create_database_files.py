@@ -95,7 +95,7 @@ def write_int_file(filnam, smiles, filename,ints,found,maxdof):
             ofile.write("\n")
             
 def write_files_pol(fr, ir_av,r_aa,r_ab,p_aaa,p_baa,p_aab,p_abc, smiles, filename,found):
-    write_int_file("frequencies.txt", smiles, filename,fr,found,,maxdof)
+    write_int_file("frequencies.txt", smiles, filename,fr,found,maxdof)
     write_int_file("IR_intensities.txt", smiles, filename,ir_av,found,maxdof)
     write_int_file("Raman_Stokes_intensities_aa.txt", smiles, filename,r_aa,found,maxdof)
     write_int_file("Raman_Stokes_intensities_ab.txt", smiles, filename,r_ab,found,maxdof)
